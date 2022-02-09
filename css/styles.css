@@ -11,13 +11,13 @@
 }
 
 /* -------------GLOBAL STYLES--------------- */
-/* ----Приховані елементи---- */
 ul,
 ol {
   padding: 0px;
   margin: 0px;
 }
 
+/* ----Приховані елементи---- */
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -217,6 +217,11 @@ body {
   color: var(--primary-white-color);
 
   text-align: center;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-title {
@@ -248,6 +253,29 @@ body {
   margin-right: 0px;
 }
 
+.ability::before {
+  display: block;
+  content: '';
+  height: 120px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.ability:nth-child(1)::before {
+  background-image: url('../images/feature-card-1.svg');
+}
+
+.ability:nth-child(2)::before {
+  background-image: url('../images/feature-card-2.svg');
+}
+.ability:nth-child(3)::before {
+  background-image: url('../images/feature-card-3.svg');
+}
+
+.ability:nth-child(4)::before {
+  background-image: url(../images/feature-card-4.svg);
+}
+
 .features .feature-title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -276,6 +304,14 @@ body {
   padding-left: 0;
 }
 
+.activity > .item + .item {
+  margin-left: 30px;
+}
+
+.activity > .item {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .activities .activities-title {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -287,25 +323,12 @@ body {
   text-align: center;
 }
 
-.activity > .item + .item {
-  margin-left: 30px;
-}
-
 /* team */
 .team {
   padding-top: 94px;
   padding-bottom: 94px;
 
   background-color: var(--secondary-white-color);
-}
-
-.team-pro {
-  display: flex;
-  padding-left: 0;
-}
-
-.team-pro > .team-card + .team-card {
-  margin-left: 30px;
 }
 
 .team-title {
@@ -319,9 +342,20 @@ body {
   text-align: center;
 }
 
+.team-pro {
+  display: flex;
+  padding-left: 0;
+}
+
+.team-pro > .team-card + .team-card {
+  margin-left: 30px;
+}
+
 .team .team-card {
   padding-bottom: 30px;
   background-color: var(--primary-white-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .team .card-title {
